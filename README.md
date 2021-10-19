@@ -1,4 +1,10 @@
 # Redis deployment on Minikube using helm - Local
+The repository contains:
+1. Readme.md instructions file that explains how to deploy Redis to Minikube using Helm
+2. Security is enabled by default in the official redis helm chart
+3. values.yaml file that sets an extraFlag of loglevel to debug
+
+
 ### Pre-requisites:
 1. Windows 10+ OS
 2. Chocolatey package manager installed - https://chocolatey.org/install
@@ -61,12 +67,13 @@ $ repo update
 
 # Deploy Redis using Helm
 ```
-$ helm install my-release stable/redis
+$ helm install my-release stable/redis -f values.yaml
 ```
 Verify Deployment:
 ```
 $ kubectl get all
 ```
+# Redis is successfully deployed with security in debug mode
 
 ### Get your password 
 ```
@@ -101,11 +108,3 @@ $ kubectl port-forward --namespace default svc/my-release-redis-master 6379:6379
 ```
 $ rdcli -h 127.0.0.1 -p 6379 -a <REDIS-PASSWORD>
 ```
-### Redis Security is enabled be default
-Can be configured in values.yaml file
-"
-securityContext:
-  enabled: true
-  fsGroup: 1001
-  runAsUser: 1001
-"
