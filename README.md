@@ -59,7 +59,7 @@ Update repo:
 $ repo update
 ```
 
-### Deploy Redis using Helm
+# Deploy Redis using Helm
 ```
 $ helm install my-release stable/redis
 ```
@@ -75,7 +75,7 @@ $ kubectl get secret --namespace default my-release-redis
 ```
 1. You will get a base64 coded String
 2. Decode the string using an online [decoder](https://www.base64decode.org/)
-3. Save the <REDIS-PASSWORD>
+3. Save the REDIS-PASSWORD
 
 
 ### Install redis-cli
@@ -99,6 +99,6 @@ $ kubectl port-forward --namespace default svc/my-release-redis-master 6379:6379
 ```
 ### Use redis cli
 ```
-$ rdcli -h 127.0.0.1 -p 6379 -a UeBqYL6xbr
+$ rdcli -h 127.0.0.1 -p 6379 -a <REDIS-PASSWORD>
 ```
 
