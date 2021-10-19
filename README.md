@@ -86,11 +86,11 @@ $ npm install -g redis-cli
 ### Connect using the Redis CLI:
 Master:
 ```
-$ redis-cli -h my-release-redis-master -a <REDIS-PASSWORD>
+$ rdcli -h my-release-redis-master -a <REDIS-PASSWORD>
 ```
 Worker:
 ```
-$ redis-cli -h my-release-redis-slave -a $REDIS_PASSWORD
+$ rdcli -h my-release-redis-slave -a $REDIS_PASSWORD
 ```
 
 ### Forward / set ports:
