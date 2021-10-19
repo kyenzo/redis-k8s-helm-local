@@ -3,7 +3,8 @@ The repository contains:
 1. Readme.md instructions file that explains how to deploy Redis to Minikube using Helm
 2. Security is enabled by default in the official redis helm chart
 3. values.yaml file that sets an extraFlag of loglevel to debug
-
+4. Recomended Redis helm chart - Official Redis helm on GitHub: https://github.com/helm/charts/tree/master/stable/redis
+5. It covers features such as - Cluster settings, Sentinel, networkPolicy, securityContext, persistence placeholder for volume, ExtraFlags section for Master and Slave, metrics, volumePermissins, and more.
 
 ### Pre-requisites:
 1. Windows 10+ OS
