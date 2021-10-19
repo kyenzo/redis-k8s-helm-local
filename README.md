@@ -1,4 +1,4 @@
-# Local Redis deployment on Minikube using helm
+# Redis deployment on Minikube using helm - Local
 ### Pre-requisites:
 1. Windows 10+ OS
 2. Chocolatey package manager installed - https://chocolatey.org/install
@@ -101,4 +101,11 @@ $ kubectl port-forward --namespace default svc/my-release-redis-master 6379:6379
 ```
 $ rdcli -h 127.0.0.1 -p 6379 -a <REDIS-PASSWORD>
 ```
-
+### Redis Security is enabled be default
+Can be configured in values.yaml file
+"
+securityContext:
+  enabled: true
+  fsGroup: 1001
+  runAsUser: 1001
+"
