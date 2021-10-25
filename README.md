@@ -48,22 +48,14 @@ Verify installation:
 $ kubectl get all
 ```
 
-### Add Bitnami and Stable repo to helm
-bitnami:
-```
-$ helm repo add bitnami https://charts.bitnami.com/bitnami
-```
-Update repo:
-```
-$ repo update
-```
+### Add Stable repo to helm
 Stable:
 ```
 $ helm repo add stable https://charts.helm.sh/stable
 ```
 Update repo:
 ```
-$ repo update
+$ helm repo update
 ```
 
 # Deploy Redis using Helm
